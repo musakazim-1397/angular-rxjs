@@ -4,3 +4,6 @@
 <p>{{userCreated}}</p>
 
 <button [disabled]="!allowNewUser" (click)="onCreateUser()">Create User</button>
+
+<input type="text" (input)="onUserEnter($event)">
+<p>{{enteredData}}</p>

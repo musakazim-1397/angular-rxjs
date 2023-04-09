@@ -9,13 +9,20 @@ export class FirstComponentComponent {
     name = "John";
     age = 20;
     allowNewUser = false;
-    userCreated='No user created'
+    userCreated='No user created';
+    enteredData = '';
 
     constructor(){
         setTimeout(() => {
             this.allowNewUser = true;
         }, 2000);
     }
+
+    onUserEnter(event : Event){
+        this.enteredData = (<HTMLInputElement>event.target).value;
+    }
+
+  
 
     onCreateUser(){
       this.userCreated = 'User was created';
