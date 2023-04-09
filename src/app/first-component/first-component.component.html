@@ -1,5 +1,6 @@
 <p>first-component works!</p>
 <p>I'm {{name}} and my age is {{age}}</p>
 <p>{{getUserDetails()}}</p>
+<p>{{userCreated}}</p>
 
-<button [disabled]="!allowNewUser" >Create User</button>
+<button [disabled]="!allowNewUser" (click)="onCreateUser()">Create User</button>
