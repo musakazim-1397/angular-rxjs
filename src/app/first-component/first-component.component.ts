@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
 export class FirstComponentComponent {
     name = "John";
     age = 20;
+    allowNewUser = false;
+
+    constructor(){
+        setTimeout(() => {
+            this.allowNewUser = true;
+        }, 2000);
+    }
 
     getUserDetails(){
         return this.name + " " + this.age;
