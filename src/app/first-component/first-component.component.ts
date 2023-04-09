@@ -9,8 +9,10 @@ export class FirstComponentComponent {
     name = "John";
     age = 20;
     allowNewUser = false;
+    iAmTrue = true;
     userCreated='No user created';
     enteredData = '';
+    myArray = ['one', 'two', 'three'];
 
     constructor(){
         setTimeout(() => {
@@ -24,6 +26,9 @@ export class FirstComponentComponent {
 
   
 
+    makeMeFalse(){
+        this.iAmTrue = false;
+    }
     onCreateUser(){
       this.userCreated = 'User was created';
     }

@@ -7,3 +7,14 @@
 
 <input type="text" (input)="onUserEnter($event)">
 <p>{{enteredData}}</p>
+
+<p *ngIf="iAmTrue; else snpp">ng if para</p>
+<ng-template #snpp>
+  <p>ng if else para</p>
+</ng-template>
+<button (click)="makeMeFalse()">Toggle Im True</button>
+
+<p [ngStyle]="{backgroundColor:allowNewUser?'red':'green'}"
+    [ngClass]="{doug:allowNewUser===true}">I'm dynamically styled</p>
+
+<p *ngFor="let item of myArray; let i= index">{{item}} item- {{i}}</p>
